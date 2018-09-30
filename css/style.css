@@ -1,0 +1,402 @@
+body{
+	margin:0;
+	padding:0;
+	background: #ddd ;
+}
+/* Header */
+.section{
+	display:grid;
+	grid-template-columns: 7% repeat(22, 1fr) 7%;
+}
+
+.header{
+	background: #111;
+	grid-column-start: 1;
+	grid-column-end: 25;
+}
+.logo, .navigation{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 1em 0;
+}
+.logo{
+	grid-column-start: 2;
+	grid-column-end: 8;
+}
+.navigation{
+	grid-column-start: 9;
+	grid-column-end: 21;
+	height: 2.7em;
+
+}
+.navigation a{
+	text-decoration: none;
+	color:#eee;
+	font-family: verdana;
+	font-size: 1em;
+	margin: auto;
+	padding:0.6em 0.8em;
+	text-decoration: none;
+    display: block;
+    /* -webkit-transition: color .3s ease-in-out;
+	-o-transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out; */
+	transition: color .3s ease-in-out;
+}
+.current a{
+	color: #aaa;
+}
+.current a:hover{
+	color: #aaa;
+}
+
+.navigation a:hover{
+	color: #4bffff;
+	padding:0.6em 0.8em;
+}
+/* End header */
+
+/* "Навігація"" */
+.navtop li{
+	position: relative;
+	border-left: 1px solid #333;
+}
+nav li:first-child{
+	border-left: none;
+}
+nav a:first-child{
+	border-top: none;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.sub-nav{
+	position: absolute;
+	min-width: 10em;
+	background: rgba(1, 1, 1, .9);
+}
+.sub-nav a{
+	color: #ddd;
+	border-top: 1px solid #333;
+}
+.sub-nav li{
+	border-top: 1px solid #333;
+}
+nav li ul{
+	visibility:hidden;
+	opacity: 0;
+	position: absolute;
+	transition: all  .4s linear;
+
+}
+nav li:hover a{
+	color: #fff;
+}
+nav li:hover ul{
+	visibility:visible;
+	margin-top: 1.3em;
+	display: block;	
+	opacity: 1;
+}
+.breadcrumbs{
+	padding: 0;
+	margin: 0;
+	grid-column-start: 4;
+	grid-column-end: 20;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.breadcrumbs li{
+	float: left;
+	list-style-type:none;
+	font-family: 'roboto';
+	font-size: 0.8em;
+	padding:0.3em 0.3em 0.5em 0.3em;
+	color: #1188CC;
+}
+.breadcrumbs a{
+	color: #1188CC;
+	text-decoration: none;
+	transition: background .3s ease-in-out;
+}
+.breadcrumbs a:hover{
+	background: yellow;
+}
+/* Кінець "навігація"*/
+
+
+/* Центральний бок головна */
+
+.image{
+	grid-template-rows: repeat(12 1fr) ;
+	background: url('../img/car.jpg') #111;
+	background-size: cover;
+	height: auto;
+}
+.image-title{
+	grid-column-start: 5;
+	grid-column-end: 20;
+	display: flex;
+	justify-content: center;
+}
+.image-title h2{
+	font-family: verdana;
+	font-weight: 100;
+	color: #eee;
+}
+.image-news{
+	grid-column-start:5;
+	grid-column-end:21;
+	display: grid;
+	grid-template-columns: repeat(12 1fr);
+}
+.image-data{
+	font-family: verdana;
+	color: #eef;
+	background: rgba(50, 50, 50, .2);
+	margin:0;
+	/* padding: 0.5em 0.7em; */
+	border-radius: 0.5em;
+}
+.image-data table{
+	margin: 0.5em 3em;
+}
+
+.image-news a:link{
+	color: #ddf;
+	transition: color .3s ease-in-out;
+}
+.image-news a:hover{
+	color: #4bffff;
+}
+.image-news a:visited{
+	color: #bbd;
+}
+.image-news p {
+	font-family: verdana;
+	color: #ddd;
+	font-weight: 100;
+	/* font-size: 1.1em; */
+	letter-spacing: 0.007em;
+	text-align: left;
+}
+
+
+.image div:last-child{
+	margin-bottom: 2em;
+}
+.small-images{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 4em;
+}
+.image-small{
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	box-shadow: 0.4em 0.4em 1em rgba(10, 10,10, 0.4);
+ 	margin: 0.5em;
+	transition-property: height, width;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+.image-small:hover{
+	cursor: pointer;
+	width: 3.5em;
+	height: 3.5em;
+}
+.ism-1{
+	background: url('../img/hotlamp/1-sm.jpg');
+	background-size: cover; 
+}
+.ism-2{
+	background: url('../img/hotlamp/2-sm.jpg');
+	background-size: cover; 
+}
+.ism-3{
+	background: url('../img/hotlamp/3-sm.jpg');
+	background-size: cover; 
+}
+.ism-4{
+	background: url('../img/hotlamp/4-sm.jpg');
+	background-size: cover; 
+}
+.ism-5{
+	background: url('../img/hotlamp/5-sm.jpg');
+	background-size: cover; 
+}
+.ism-6{
+	background: url('../img/hotlamp/6-sm.jpg');
+	background-size: cover; 
+}
+
+
+/* Центральний бок головна кінець*/
+/* video */
+.video-cont{
+	display:grid;
+	grid-template-columns: 15% 1fr 15%;
+	margin: 2em 0;
+}
+.video{
+	grid-column-start: 2;
+	grid-column-end: 3;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2em 0;
+}
+.v1{
+	margin:0 1em 2em 1em;	
+}
+.v2{
+	margin:0 1em;
+}
+/* video  кінець*/
+/* footer */
+footer{
+	background: #222;
+	height: 5em;
+}
+.social{
+	grid-column-start: 9;
+	grid-column-end: 17;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;	
+	
+}
+.social div{
+	margin: 0 2em;
+	display: flex;
+}
+.footer-tel{
+	grid-column-start: 3;
+	grid-column-end: 9;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: left;
+	margin: auto;	
+}
+.footer-tel, .footer-mail p{
+	font-family: verdana;
+	color: #4bffff;
+}
+
+.footer-mail{
+	grid-column-start: 18;
+	grid-column-end: 24;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;	
+}
+/* footer */
+
+/* about */
+.image-about{
+	grid-column-start:5;
+	grid-column-end:21;
+	background: rgba(50, 50, 50, .2);
+	border-radius: 0.2em;
+	padding: 1em 3em;
+}
+.image-about p{
+	font-family: verdana;
+	color: #ddd;
+	letter-spacing: 0.007em;
+	line-height: 1.5;
+}
+.about-foto{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.about-foto-row{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+}
+.about-foto-elem{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* about end*/
+/* slider */
+
+.slider-cover{
+  position: relative;
+}
+.slide	 img{
+	display: block;
+    margin: 1em auto;
+    width: 80%;
+}
+
+/* slider end */
+/* Заглушка */
+.inwork{
+	height: 40em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inwork p{
+	font-family: verdana;
+	color: #eef;
+	font-size: 1.5em;
+}
+.prev, .next{
+	font-size: 2em;
+	position: absolute;
+	top: 50%;
+}
+.prev:hover, .next:hover{
+	cursor: pointer;
+}
+.prev{
+	left: 0.5em;
+}
+.next{
+	right: 0.5em;
+}
+/* photo */
+.hot-lamp-gallery{
+	grid-column-start: 	6;
+	grid-column-end: 21;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background: rgba(50, 50, 50, .6);
+	border-radius: 0.3em;
+}
+.hot-lamp-gallery img{
+	height: 14em;
+	width: 14em;
+	margin: 0.4em;
+	border: 1px rgba(0, 0, 0, .0) solid;
+
+	transition-property: background, border-color;
+	transition-duration: 0.2s;
+}
+.hot-lamp-gallery img:hover{
+	cursor: pointer;
+	background: rgba(100, 100, 100, .5);
+	border: 1px #ddd solid;
+}
+/* end of photo */
+/* Заглушка */
+@font-face {
+    font-family: Roboto; 
+    src: url(../fonts/roboto.ttf); 
+}
